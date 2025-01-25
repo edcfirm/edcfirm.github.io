@@ -1,15 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <!-- Cover Photo Section Start -->
-    <section class="cover-photo" 
-             style="background: url('./asset/image/EDC-cover-01-scaled.jpg') 
-                     no-repeat center center; 
-                    background-size: cover; 
-                    height: 400px; 
-                    position: relative;">
-    </section>
-    <!-- Cover Photo Section End -->
 	
 <head>
     <meta charset="UTF-8">
@@ -27,6 +17,17 @@
 <body>
 	
     <!-- Header Start  -->
+	<div class="cover-photo"></div>
+	.cover-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    background: url('asset/image/EDC-cover-01-scaled.jpg') no-repeat center center;
+    background-size: cover;
+}
+	
     <section class="header ">
         <!-- Header Navigation Start  -->
         <div class="container header-nav">
