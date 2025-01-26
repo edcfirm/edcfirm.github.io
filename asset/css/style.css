@@ -183,76 +183,83 @@ button.nav-button{
 /* Multiframe Carousel  */
 
 @media (min-width: 768px) {
-
     .service-carousel.carousel-inner .carousel-item-right.active,
     .service-carousel.carousel-inner .carousel-item-next {
-        transform: translateX(50%);
+        transform: none !important; /* Disable translation for next items */
     }
 
     .service-carousel.carousel-inner .carousel-item-left.active,
     .service-carousel.carousel-inner .carousel-item-prev {
-        transform: translateX(-50%);
+        transform: none !important; /* Disable translation for previous items */
     }
 }
 
-/* large - display 3 */
+/* Large screens - display 3 items */
 @media (min-width: 992px) {
-
     .service-carousel.carousel-inner .carousel-item-right.active,
     .service-carousel.carousel-inner .carousel-item-next {
-        transform: translateX(33%);
+        transform: none !important; /* Disable translation for large screens */
     }
 
     .service-carousel.carousel-inner .carousel-item-left.active,
     .service-carousel.carousel-inner .carousel-item-prev {
-        transform: translateX(-33%);
+        transform: none !important; /* Disable translation for large screens */
     }
 }
 
 @media (max-width: 768px) {
-    .service-carousel.carousel-inner .carousel-item>div {
+    .service-carousel.carousel-inner .carousel-item > div {
         display: none;
     }
 
-    .service-carousel.carousel-inner .carousel-item>div:first-child {
+    .service-carousel.carousel-inner .carousel-item > div:first-child {
         display: block;
     }
 }
 
- .carousel-inner .carousel-item.active,
- .carousel-inner .carousel-item-next,
- .carousel-inner .carousel-item-prev {
+/* Ensure all active, next, and previous items are visible */
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
     display: flex;
 }
 
- .carousel-inner .carousel-item-right,
- .carousel-inner .carousel-item-left {
-    transform: translateX(0);
+/* Disable any default sliding animations */
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left {
+    transform: none !important; /* Remove translateX */
 }
-.service-card h5{
-	font-family:'Roboto',sans-serif;
-	font-size:26px;
-	font-weight:500;
-	color:#070A57;
+
+/* Service card styling */
+.service-card h5 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    color: #070A57;
 }
-.service-card p{
-	font-family:'Roboto',sans-serif;
-	font-size:18px;
-	color:#64707D;
+
+.service-card p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #64707D;
 }
-.service-card a{
-	color:#64707D;
-	font-family:'Roboto',sans-serif;
-	font-size:18px;
-	font-weight:500;
-	color:#64707D;
-	text-decoration:underline;
+
+.service-card a {
+    color: #64707D;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: underline;
 }
-.service-card a:hover{
-	color:#FFBA00;
-	transition:all 0.5s ease;
+
+.service-card a:hover {
+    color: #FFBA00;
+    transition: all 0.5s ease;
 }
-.service-control-prev, .service-control-next {
+
+/* Navigation arrow styling */
+.service-control-prev,
+.service-control-next {
     height: 50px;
     width: 50px;
     outline: black;
@@ -260,6 +267,7 @@ button.nav-button{
     background-size: 100%, 100%;
     border-radius: 3px;
 }
+
 .service-control-next {
     margin-right: -105px;
 }
@@ -267,9 +275,11 @@ button.nav-button{
 .service-control-prev {
     margin-left: -205px;
 }
+
 .service-card {
     min-height: 495px;
 }
+
 
 /* Testimonial Styles  */
 .testimonial .card{
