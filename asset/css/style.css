@@ -24,15 +24,6 @@ a:hover{
     padding-bottom: 30px;
 }
 
-/* Rayid - Custom Top Menu Bar*/
-.main-menu ul li a.active {
-    color: #FFBA00; /* Highlight color */
-    font-weight: bold; /* Bold font */
-    border-bottom: 2px solid #FFBA00; /* Optional underline for active link */
-    transition: all 0.3s ease;
-}
-
-
 
 /* Adding Fonts*/
 
@@ -61,6 +52,12 @@ a:hover{
     font-weight: 500;
     font-size: 16px;
 }
+
+.main-menu ul li:active{
+    color: #FFBA00; /* Highlight color */
+    font-weight: bold; /* Bold font */
+}
+
 .main-menu ul li:hover{
     transform: scale(1.1);
     transition: 0.5s all ease;
