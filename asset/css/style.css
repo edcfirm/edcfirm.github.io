@@ -254,7 +254,6 @@ button.nav-button{
 
 .service-card a:hover {
     color: #FFBA00;
-	opacity: 0.5;
     transition: all 0.5s ease;
 }
 
@@ -665,16 +664,17 @@ form#newsletter-form button,.team-counter button {
 .portfolio-block {
     position: relative;
     margin-bottom:20px;
-    border: 2px solod red;
+    border: 2px solid red;
 }
 
 .portfolio-overlay {
     position: absolute;
-    background: #FFBA00;
+    background: #009dff;
     height: 90%;
     width: 90%;
     top: 10px;
     left: 15px;
+    opacity: 0.5;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -684,6 +684,7 @@ form#newsletter-form button,.team-counter button {
 
 .portfolio-block:hover .portfolio-overlay{
 	display:flex;
+	opacity: 0.5;
 	transition:0.5s ease;
 }
 
