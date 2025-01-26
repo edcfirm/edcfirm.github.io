@@ -21,7 +21,19 @@ a:hover{
 }
 .section-padding{
     padding-top: 30px;
+    padding-bottom: 30px;
 }
+
+/* Rayid - Custom Top Menu Bar*/
+.main-menu ul li a.active {
+    color: #FFBA00; /* Highlight color */
+    font-weight: bold; /* Bold font */
+    border-bottom: 2px solid #FFBA00; /* Optional underline for active link */
+    transition: all 0.3s ease;
+}
+
+
+
 /* Adding Fonts*/
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;500&display=swap');
