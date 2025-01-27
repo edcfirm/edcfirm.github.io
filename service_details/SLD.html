@@ -130,29 +130,55 @@
 
                             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
                     </div>
+
+<!-- Project Contact Start  -->
                     <div class="col-md-4">
-                        <h4 class="get-quote">Get a Free Quote</h4>
-                        <div class="mb-3">
-                            <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Your Name">
+            		<div class="row mt-5">
+                		<h2 class="text-center w-100 service-heading">Get a Quote!</h2>
+            		</div>
+	                <div class="col-md-6">
+                    	<form action="" method="post" id="project-details">
+
+                       	<div class="form-group">
+                            <label for="name"></label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name"
+                                required>
+                    		<!--placing icon using a span element-->
+                            <span class="icon fa fa-user fa-lg"></span>
                         </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your Email">
+
+                        <div class="form-group">
+                            <label for="email"></label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Your E-mail"
+                                required>
+                            <span class="icon fa fa-envelope fa-lg"></span>
                         </div>
-                        <div class="mb-3">
-                            
-                            <select class="form-control" id="exampleFormControlSelect1" placeholder="Your Project">
-                                <option>Your Project</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
+
+                        <div class="form-group">
+                            <label for="project-type"></label>
+                            <select id="project-type" name="project-type">
+                                <option> Select Project Type</option>
+                                <option value="Design & Calculation">Design & Calculation</option>
+                                <option value="Design & Drawing">Design & Drawing</option>
+                                <option value="Field Visit">Field Visit</option>
+                                <option value="Consultancy">Consultancy</option>
                             </select>
                         </div>
-                        <div class="mb-3">
-                            <textarea class="form-control py-5" id="exampleFormControlTextarea1" rows="3" placeholder="Your Message"></textarea>
-                    <button type="button" class="btn btn-warning btn-lg btn-block get-quote-button py-3">Submit Project Details ></button>
+
+                        <div class="form-group">
+                            <textarea rows="10" cols="50" id="msg" name="msg" placeholder="Project Details"
+                                style="width:100%"></textarea>
+                            <span class="icon-textarea fa fa-edit fa-lg "></span>
+                        </div>
+
+                        <div class=" text-center">
+                            <input type="submit" name="submit" value="Request Quote" class="btn btn-default">
+                            <!-- <button type="submit" class="btn btn-default">Submit Project Details <i class="fas fa-angle-right"></i> </button> -->
+                        </div>
+                    </form>
                 </div>
-            </div>
+<!-- Project Contact END -->	   
+            	</div>
         </div>
     </div>
 </div>
