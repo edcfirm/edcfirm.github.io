@@ -664,7 +664,7 @@ form#newsletter-form button,.team-counter button {
 .portfolio-block {
     position: relative;
     margin-bottom:20px;
-    border: 0.5px solid black;
+    border: 0.25px solid black;
 }
 
 .portfolio-overlay {
@@ -674,7 +674,7 @@ form#newsletter-form button,.team-counter button {
     width: 90%;
     top: 10px;
     left: 15px;
-    opacity: 0.8;
+    opacity: 0.9;
     display: flex;
     flex-direction: column;
     align-items: center;
