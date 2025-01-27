@@ -664,7 +664,7 @@ form#newsletter-form button,.team-counter button {
 .portfolio-block {
     position: relative;
     margin-bottom:20px;
-    border: 2px solid black;
+    border: 0.5px solid black;
 }
 
 .portfolio-overlay {
