@@ -664,7 +664,7 @@ form#newsletter-form button,.team-counter button {
 .portfolio-block {
     position: relative;
     margin-bottom:20px;
-    border: 2px solid red;
+    border: 2px solid black;
 }
 
 .portfolio-overlay {
@@ -674,7 +674,7 @@ form#newsletter-form button,.team-counter button {
     width: 90%;
     top: 10px;
     left: 15px;
-    opacity: 0.5;
+    opacity: 0.8;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -684,11 +684,10 @@ form#newsletter-form button,.team-counter button {
 
 .portfolio-block:hover .portfolio-overlay{
 	display:flex;
-	opacity: 0.5;
 	transition:0.5s ease;
 }
 
-.portfolio-overlay h5 {font-family: 'Roboto',sans-serif;font-size: 35px;font-weight: 500;color: #3700ff;}
+.portfolio-overlay h5 {font-family: 'Roboto',sans-serif;font-size: 35px;font-weight: 500;color: #c40404;}
 
 .portfolio-overlay p {font-family: 'Roboto',sans-serif;font-size: 20px;font-weight: 500;color: #000000;}
 
