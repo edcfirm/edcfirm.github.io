@@ -96,9 +96,7 @@
 <section class="project-contact section-padding">
     <div class="container">
         <!-- Toast Message for Success/Error -->
-        <?php if (!empty($success)): ?>
-            <p class="text-center" style="color: green;"><?= $success; ?></p>
-        <?php endif; ?>
+        <p id="form-message" class="text-center" style="display: none;"></p>
 
         <div class="row mt-5">
             <h3 class="text-center w-100 service-heading">Get a <span class="highlight">Quote!</span></h3>
@@ -108,7 +106,7 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-6">
-                <form action="" method="post" id="project-details">
+                <form id="project-details" action="https://formspree.io/f/xwpvoaqy" method="POST">
 
                     <div class="form-group">
                         <label for="name"></label>
@@ -142,34 +140,44 @@
                         <input type="submit" name="submit" value="Request Quote" class="btn btn-default" style="background-color: #007BFF; color: #FFFFFF;">
                     </div>
                 </form>
-
-                <?php
-                if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    $name = isset($_POST['name']) ? strip_tags(trim($_POST['name'])) : '';
-                    $email = isset($_POST['email']) ? filter_var($_POST['email'], FILTER_SANITIZE_EMAIL) : '';
-                    $project_type = isset($_POST['project-type']) ? strip_tags(trim($_POST['project-type'])) : 'Unknown Project Type';
-                    $message = isset($_POST['msg']) ? strip_tags(trim($_POST['msg'])) : 'No project details provided.';
-
-                    if (!empty($name) && !empty($email) && !empty($project_type)) {
-                        $to = "edcfirm2023@gmail.com";
-                        $subject = "Quote for $project_type | $name";
-                        $body = "###\n$message\n\nSent by:\n$name\n$email";
-                        $headers = "From: $email\r\nReply-To: $email\r\nContent-Type: text/plain; charset=UTF-8";
-
-                        if (mail($to, $subject, $body, $headers)) {
-                            echo "<p class='text-center' style='color: green;'>Your quote request has been sent successfully.</p>";
-                        } else {
-                            echo "<p class='text-center' style='color: red;'>Error sending email. Please try again later.</p>";
-                        }
-                    } else {
-                        echo "<p class='text-center' style='color: red;'>All fields are required.</p>";
-                    }
-                }
-                ?>
             </div>
         </div>
     </div>
 </section>
+
+<!-- JavaScript for Handling Form Submission with Formspree -->
+<script>
+document.getElementById("project-details").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    var form = event.target;
+    var formData = new FormData(form);
+    var messageBox = document.getElementById("form-message");
+
+    fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            messageBox.style.display = "block";
+            messageBox.style.color = "green";
+            messageBox.innerText = "Your quote request has been sent successfully!";
+            form.reset(); // Clear form fields after successful submission
+        } else {
+            messageBox.style.display = "block";
+            messageBox.style.color = "red";
+            messageBox.innerText = "Error sending request. Please try again.";
+        }
+    }).catch(error => {
+        messageBox.style.display = "block";
+        messageBox.style.color = "red";
+        messageBox.innerText = "Network error. Please check your internet connection.";
+    });
+});
+</script>
 <!-- Project Contact END -->
 
 <!-- Project Contact END -->
