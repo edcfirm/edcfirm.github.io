@@ -92,56 +92,86 @@
 <!-- Header End  -->
 	
 <!-- Project Contact Start  -->
-    <section class="project-contact section-padding">
-        <div class="container">
-        <!-- Toast  -->
-        <?= $success; ?>
-            <div class="row mt-5">
-                <h3 class="text-center w-100 service-heading">Get a <span class="highlight">Quote!</span> </h3>
+<!-- Project Contact Start  -->
+<section class="project-contact section-padding">
+    <div class="container">
+        <!-- Toast Message for Success/Error -->
+        <?php if (!empty($success)): ?>
+            <p class="text-center" style="color: green;"><?= $success; ?></p>
+        <?php endif; ?>
+
+        <div class="row mt-5">
+            <h3 class="text-center w-100 service-heading">Get a <span class="highlight">Quote!</span></h3>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <form action="" method="post" id="project-details">
+
+                    <div class="form-group">
+                        <label for="name"></label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                        <span class="icon fa fa-user fa-lg"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email"></label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Your E-mail" required>
+                        <span class="icon fa fa-envelope fa-lg"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="project-type"></label>
+                        <select id="project-type" name="project-type" required>
+                            <option value="">Select Project Type</option>
+                            <option value="Design & Calculation">Design & Calculation</option>
+                            <option value="Design & Drawing">Design & Drawing</option>
+                            <option value="Field Visit">Field Visit</option>
+                            <option value="Consultancy">Consultancy</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea rows="10" cols="50" id="msg" name="msg" placeholder="Project Details" style="width:100%" required></textarea>
+                        <span class="icon-textarea fa fa-edit fa-lg"></span>
+                    </div>
+
+                    <div class="text-center">
+                        <input type="submit" name="submit" value="Request Quote" class="btn btn-default" style="background-color: #007BFF; color: #FFFFFF;">
+                    </div>
+                </form>
+
+                <?php
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    $name = isset($_POST['name']) ? strip_tags(trim($_POST['name'])) : '';
+                    $email = isset($_POST['email']) ? filter_var($_POST['email'], FILTER_SANITIZE_EMAIL) : '';
+                    $project_type = isset($_POST['project-type']) ? strip_tags(trim($_POST['project-type'])) : 'Unknown Project Type';
+                    $message = isset($_POST['msg']) ? strip_tags(trim($_POST['msg'])) : 'No project details provided.';
+
+                    if (!empty($name) && !empty($email) && !empty($project_type)) {
+                        $to = "edcfirm2023@gmail.com";
+                        $subject = "Quote for $project_type | $name";
+                        $body = "###\n$message\n\nSent by:\n$name\n$email";
+                        $headers = "From: $email\r\nReply-To: $email\r\nContent-Type: text/plain; charset=UTF-8";
+
+                        if (mail($to, $subject, $body, $headers)) {
+                            echo "<p class='text-center' style='color: green;'>Your quote request has been sent successfully.</p>";
+                        } else {
+                            echo "<p class='text-center' style='color: red;'>Error sending email. Please try again later.</p>";
+                        }
+                    } else {
+                        echo "<p class='text-center' style='color: red;'>All fields are required.</p>";
+                    }
+                }
+                ?>
             </div>
         </div>
+    </div>
+</section>
+<!-- Project Contact END -->
 
-        <div class="container mt-5">
-            <div class="row">
-                <div class="col-md-6">
-                    <form action="" method="post" id="project-details">
-
-                        <div class="form-group">
-                            <label for="name"></label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name"
-                                required>
-                            <!--placing icon using a span element-->
-                            <span class="icon fa fa-user fa-lg"></span>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email"></label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Your E-mail"
-                                required>
-                            <span class="icon fa fa-envelope fa-lg"></span>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="project-type"></label>
-                            <select id="project-type" name="project-type">
-                                <option> Select Project Type</option>
-                                <option value="Design & Calculation">Design & Calculation</option>
-                                <option value="Design & Drawing">Design & Drawing</option>
-                                <option value="Field Visit">Field Visit</option>
-                                <option value="Consultancy">Consultancy</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <textarea rows="10" cols="50" id="msg" name="msg" placeholder="Project Details"
-                                style="width:100%"></textarea>
-                            <span class="icon-textarea fa fa-edit fa-lg "></span>
-                        </div>
-			<div class="text-center">
-			    <input type="submit" name="submit" value="Request Quote" class="btn btn-default" style="background-color: #007BFF; color: #FFFFFF;">
-			</div>
-                    </form>
-                </div>
 <!-- Project Contact END -->
 
 	    
