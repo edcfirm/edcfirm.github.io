@@ -137,6 +137,7 @@
                         </div>
                     </form>
                 </div>
+<!-- Project Query END -->		    
 
  <!-- Portfolio Start  -->
 <!-- Portfolio Start -->
@@ -340,7 +341,7 @@
 <!-- Footer End  -->
 
 		    
-    <!--Adding Scripts-->
+<!--Adding Scripts-->
 
     <!-- JavaScript for Handling Form Submission with Formspree -->
     <script>
@@ -361,12 +362,12 @@
                 if (response.ok) {
                     messageBox.style.display = "block";
                     messageBox.style.color = "green";
-                    messageBox.innerText = "Your quote request has been sent successfully!";
+                    messageBox.innerText = "Your quote request has been submitted successfully!";
                     form.reset(); // Clear form fields after successful submission
                 } else {
                     messageBox.style.display = "block";
                     messageBox.style.color = "red";
-                    messageBox.innerText = "Error sending request. Please try again.";
+                    messageBox.innerText = "Error sending request. Please check if the information provided is correct. Please try again.";
                 }
             }).catch(error => {
                 messageBox.style.display = "block";
@@ -386,7 +387,5 @@
         crossorigin="anonymous"></script>
         <script src="./asset/js/mixitup.min.js"></script>
     <script src="./asset/js/main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>
