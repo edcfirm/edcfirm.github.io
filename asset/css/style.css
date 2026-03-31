@@ -180,6 +180,53 @@ button.nav-button{
     color: #070A57;
 }
 
+/* ===== EDC Firm Core Services Cards ===== */
+
+.core-services{
+    padding-top:40px;
+}
+
+.core-service-card{
+    background:#ffffff;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    transition:all 0.3s ease;
+    height:100%;
+    text-align:left;
+}
+
+.core-service-card:hover{
+    transform:translateY(-8px);
+}
+
+.core-service-card h4{
+    font-family:'Roboto',sans-serif;
+    font-size:22px;
+    font-weight:500;
+    color:#070A57;
+    margin-bottom:12px;
+}
+
+.core-service-card p{
+    font-family:'Roboto',sans-serif;
+    font-size:16px;
+    color:#64707D;
+    line-height:26px;
+}
+
+.core-service-card a{
+    display:inline-block;
+    margin-top:10px;
+    color:#FFBA00;
+    font-weight:500;
+    text-decoration:none;
+}
+
+.core-service-card a:hover{
+    text-decoration:underline;
+}
+
 /* Multiframe Carousel  */
 
 @media (min-width: 768px) {
