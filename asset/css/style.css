@@ -811,3 +811,21 @@ span.counter-plus {
     font-size: 45px;
     color: #FFBA00;
 }
+
+/* ============================= */
+/* Project Gallery Slideshow     */
+/* ============================= */
+
+.project-carousel .carousel-item{
+height:450px;
+}
+
+.project-carousel img{
+width:100%;
+height:100%;
+object-fit:cover;
+object-position:center;
+border-radius:8px;
+}
+
+
