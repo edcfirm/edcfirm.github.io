@@ -828,4 +828,60 @@ object-position:center;
 border-radius:8px;
 }
 
+/* Engineering Expertise */
 
+.expertise-card{
+background:#ffffff;
+padding:25px;
+margin-bottom:20px;
+border-radius:8px;
+box-shadow:0 6px 15px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.expertise-card:hover{
+transform:translateY(-6px);
+}
+
+.expertise-card h4{
+font-family:'Roboto',sans-serif;
+color:#070A57;
+margin-bottom:10px;
+}
+
+.expertise-card p{
+color:#64707D;
+font-size:16px;
+line-height:26px;
+}
+
+/* Company Stats */
+
+.stat-box h2{
+font-size:40px;
+color:#FFBA00;
+font-weight:600;
+}
+
+.stat-box p{
+font-size:18px;
+color:#070A57;
+}
+
+/* Consultation Section */
+
+.consultation-section{
+background:linear-gradient(30deg,#FBF1D5,#fff);
+}
+
+.consultation-section h2{
+font-size:36px;
+color:#070A57;
+margin-bottom:10px;
+}
+
+.consultation-section p{
+font-size:18px;
+color:#64707D;
+margin-bottom:20px;
+}
