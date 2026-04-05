@@ -885,3 +885,23 @@ font-size:18px;
 color:#64707D;
 margin-bottom:20px;
 }
+
+.services-section {
+max-width: 1100px;
+margin: auto;
+padding: 40px 20px;
+}
+
+.service-block {
+margin-bottom: 40px;
+}
+
+.service-block h2 {
+color: #222;
+margin-bottom: 10px;
+}
+
+.service-block ul {
+padding-left: 20px;
+line-height: 1.8;
+}
