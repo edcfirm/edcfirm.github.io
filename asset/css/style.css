@@ -905,3 +905,40 @@ margin-bottom: 10px;
 padding-left: 20px;
 line-height: 1.8;
 }
+
+.services-section{
+max-width:1100px;
+margin:auto;
+padding:50px 20px;
+}
+
+.services-header{
+margin-bottom:40px;
+}
+
+.services-header h1{
+text-align:center;
+color:#1a3faa;
+margin-bottom:20px;
+}
+
+.services-header p{
+text-align:justify;
+max-width:900px;
+margin:auto;
+line-height:1.8;
+}
+
+.service-block{
+margin-bottom:40px;
+}
+
+.service-block h2{
+margin-bottom:12px;
+color:#222;
+}
+
+.service-block ul{
+padding-left:20px;
+line-height:1.8;
+}
