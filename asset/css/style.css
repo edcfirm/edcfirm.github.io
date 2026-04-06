@@ -995,7 +995,7 @@ gap:30px;
 }
 
 .why-box{
-background:1a3faa;
+background:white;
 padding:25px;
 border-radius:6px;
 box-shadow:0 3px 10px rgba(0,0,0,0.08);
@@ -1039,5 +1039,18 @@ color:#1a3faa;
 text-decoration:none;
 border-radius:5px;
 font-weight:bold;
+}
+
+.service-block{
+background:#ffffff;
+padding:25px;
+border-radius:8px;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.service-block:hover{
+transform:translateY(-6px);
+box-shadow:0 8px 20px rgba(0,0,0,0.12);
 }
 
