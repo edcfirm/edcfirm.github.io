@@ -1059,3 +1059,19 @@ background-color:#eef3ff;
 padding:80px 0;
 margin-top:60px;
 }
+
+.related-services{
+background:#f4f7fb;
+padding:25px;
+margin-top:40px;
+border-left:4px solid #1f4e79;
+border-radius:6px;
+}
+
+.related-services h3{
+margin-top:0;
+}
+
+.related-services ul{
+padding-left:20px;
+}
