@@ -25,7 +25,7 @@
   <link rel="shortcut icon" href="/asset/image/EDC_favicon.png" type="image/png">
 
 
-    <!-- Project Gallery Image Fit Fix -->
+    <!-- Project Gallery Image Fit and Arrow Color Fix -->
     <style>
         .project-carousel .carousel-item {
             height: 500px;
@@ -41,6 +41,32 @@
             background: #ffffff;
             display: block;
             margin: 0 auto;
+        }
+
+        .project-gallery .carousel-control-prev-icon,
+        .project-gallery .carousel-control-next-icon {
+            background-image: none;
+            width: 45px;
+            height: 45px;
+            background-color: darkred;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .project-gallery .carousel-control-prev-icon::after {
+            content: '‹';
+            color: #ffffff;
+            font-size: 42px;
+            line-height: 38px;
+            font-weight: bold;
+        }
+
+        .project-gallery .carousel-control-next-icon::after {
+            content: '›';
+            color: #ffffff;
+            font-size: 42px;
+            line-height: 38px;
+            font-weight: bold;
         }
 
         @media (max-width: 768px) {
